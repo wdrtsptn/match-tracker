@@ -6,7 +6,7 @@
 </h1>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Match Tracker — Clean Final</title>
+<title>Match Tracker</title>
 <style>
   :root {
     --bg:#ffffff;
@@ -32,10 +32,18 @@
   }
   .table-card{background:var(--card);border-radius:10px;padding:8px;box-shadow:0 6px 18px rgba(11,129,208,0.05)}
   table{width:100%;border-collapse:collapse}
-  th,td{padding:12px;text-align:left;border-bottom:1px solid #e6f2fb}
-  th{font-size:13px;color:var(--muted)}
+  th,td{
+    padding:12px;
+    border-bottom:1px solid #e6f2fb;
+    vertical-align:middle;
+  }
+  th{
+    font-size:13px;
+    color:var(--muted);
+    text-align:center;
+  }
   td.home,td.away{text-align:center;font-weight:700}
-  td:first-child{font-weight:600}
+  td:first-child{font-weight:600;text-align:left}
   .hint{font-size:13px;color:var(--muted);margin-top:8px}
   .kbd{display:inline-block;padding:4px 8px;border-radius:6px;background:#f4fbff;border:1px solid #e6f7ff;color:var(--accent);font-weight:700;margin-left:6px}
   .stopwatch{
@@ -56,12 +64,12 @@
   <div class="wrap">
     <header>
       <div class="row">
-        <input type="text" id="matchName" placeholder="Nama Match">
+        <input type="text" id="matchName" placeholder="Match Name">
         <input type="date" id="matchDate">
       </div>
       <div class="row">
-        <input type="text" id="HomeName" placeholder="Team Home" value="">
-        <input type="text" id="AwayName" placeholder="Team Away" value="">
+        <input type="text" id="homeName" placeholder="Team Home" value="">
+        <input type="text" id="awayName" placeholder="Team Away" value="">
       </div>
     </header>
 
@@ -69,7 +77,7 @@
       <table id="statsTable">
         <thead>
           <tr>
-            <th>Aksi</th>
+            <th style="text-align:left;">Aksi</th>
             <th class="home">Home</th>
             <th class="away">Away</th>
           </tr>
