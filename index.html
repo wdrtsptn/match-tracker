@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="id">
 <head>
+  <h1 style="text-align:center;margin-bottom:20px;color:#0b2536;">
+  Match Tracker
+</h1>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Match Tracker — Clean Final</title>
@@ -53,12 +56,12 @@
   <div class="wrap">
     <header>
       <div class="row">
-        <input type="text" id="matchName" placeholder="Nama Match (misal: Liga Bogor)">
+        <input type="text" id="matchName" placeholder="Nama Match">
         <input type="date" id="matchDate">
       </div>
       <div class="row">
-        <input type="text" id="homeName" placeholder="Team Home" value="Riverside Forest">
-        <input type="text" id="awayName" placeholder="Team Away" value="Bina Pakuan">
+        <input type="text" id="HomeName" placeholder="Team Home" value="">
+        <input type="text" id="AwayName" placeholder="Team Away" value="">
       </div>
     </header>
 
@@ -87,14 +90,14 @@
     </p>
 
     <div class="stopwatch">
-      <div class="pos" id="homePos">🏠 Home Possession: <span id="homeTime">00:00</span></div>
-      <div class="pos" id="awayPos">🚩 Away Possession: <span id="awayTime">00:00</span></div>
-      <div class="pos" id="livePos">⚽ Live Ball Possession: <span id="livePossession">0% - 0%</span></div>
+      <div class="pos" id="homePos"> Home Possession: <span id="homeTime">00:00</span></div>
+      <div class="pos" id="awayPos"> Away Possession: <span id="awayTime">00:00</span></div>
+      <div class="pos" id="livePos"> Live Ball Possession: <span id="livePossession">0% - 0%</span></div>
     </div>
 
     <div class="controls">
-      <button class="primary" id="saveBtn">💾 Save</button>
-      <button id="resetBtn">🔁 Reset</button>
+      <button class="primary" id="saveBtn"> Save</button>
+      <button id="resetBtn"> Reset</button>
     </div>
 
     <div class="final-possession" id="finalPossession"></div>
