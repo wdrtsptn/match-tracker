@@ -1,9 +1,82 @@
-<div class="navbar">
-  <div class="hamburger" id="hamburger">&#9776;</div>
-  <h1 class="nav-title">Noltrax</h1>
-</div>
+/* Navbar */
+.navbar {
+  background: #007BFF;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 14px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
 
-<div class="sidebar" id="sidebar">
-  <h2>Menu</h2>
-  <a href="match-history.html">Match History</a>
-</div>
+.nav-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hamburger {
+  position: absolute;
+  left: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.open {
+  transform: rotate(90deg);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100vh;
+  background: #005FCC;
+  color: white;
+  padding: 30px 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Footer fix */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  padding: 16px 10px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 900;
+}
