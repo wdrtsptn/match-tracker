@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="title">Noltrax</h1>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <h1 class="nav-title">Noltrax</h1>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <a href="match-history.html">Match History</a>
+  </aside>
 
   <div class="wrap">
     <header>
@@ -59,20 +69,14 @@
     <div class="final-possession" id="finalPossession"></div>
   </div>
 
-  <footer class="slide-in-left">
+  <footer>
     <div class="footer-container">
       <div class="footer-section about">
         <h3>About</h3>
         <p>
-          NoltraxData adalah aplikasi web ringan untuk mencatat statistik pertandingan sepakbola dan menghitung ball possession secara real-time.  
-          Dikembangkan oleh SnorthfU untuk membantu analis, pelatih, dan penggemar memahami jalannya permainan secara cepat dan efisien.
+          NoltraxData is a lightweight web app designed to record football match stats and calculate real-time ball possession.
+          Developed by SnorthfU to help analysts, coaches, and fans understand the flow of the game efficiently.
         </p>
-      </div>
-
-      <div class="footer-section links">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="match-history.html">Match History</a></p>
       </div>
 
       <div class="footer-section credit">
@@ -84,5 +88,14 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
